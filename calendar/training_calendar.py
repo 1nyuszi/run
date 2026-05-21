@@ -33,7 +33,7 @@ def parse_logs(logs_dir):
             _, next_event = entries[i + 1]
             if event == "RUN" and next_event == "RELAX":
                 day = datetime.fromtimestamp(ts).date()
-                minutes_per_day[day] += 2
+                minutes_per_day[day] += 1
 
         all_timestamps.extend(ts for ts, _ in entries)
 
