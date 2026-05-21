@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Training Calendar</title>
+  <style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 24px;
+  color: #222;
+}
+h1 { text-align: center; margin: 0 0 24px; }
+.totals { text-align: center; color: #555; margin-bottom: 24px; }
+.month {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 22px 22px;
+  margin: 0 auto 24px;
+  max-width: 640px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.month h2 { text-align: center; margin: 0 0 12px; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th {
+  background: #eef0f3;
+  padding: 8px 0;
+  font-size: 0.85em;
+  color: #555;
+  font-weight: 600;
+}
+td {
+  height: 68px;
+  vertical-align: top;
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 0.9em;
+}
+td.empty { background: #fafafa; border: 1px solid #f0f0f0; }
+td.rest { background: #fff; }
+td.trained {
+  background: #4caf50;
+  color: #fff;
+  border-color: #3e9c42;
+}
+.day-num { font-weight: 600; }
+td.trained .day-num { color: #fff; }
+.minutes {
+  margin-top: 6px;
+  font-size: 0.95em;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+  <h1>Training Calendar</h1>
+  <p class="totals">66 training days &middot; 910 minutes total</p>
+  <section class="month">
+    <h2>August 2025</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="trained"><div class="day-num">1</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td></tr>
+      <tr><td class="rest"><div class="day-num">4</div></td><td class="rest"><div class="day-num">5</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td><td class="trained"><div class="day-num">8</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td></tr>
+      <tr><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="trained"><div class="day-num">14</div><div class="minutes">12 min</div></td><td class="trained"><div class="day-num">15</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td></tr>
+      <tr><td class="trained"><div class="day-num">18</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">19</div></td><td class="rest"><div class="day-num">20</div></td><td class="trained"><div class="day-num">21</div><div class="minutes">10 min</div></td><td class="trained"><div class="day-num">22</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td></tr>
+      <tr><td class="rest"><div class="day-num">25</div></td><td class="trained"><div class="day-num">26</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">27</div></td><td class="trained"><div class="day-num">28</div><div class="minutes">10 min</div></td><td class="trained"><div class="day-num">29</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>September 2025</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="rest"><div class="day-num">1</div></td><td class="trained"><div class="day-num">2</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">3</div></td><td class="rest"><div class="day-num">4</div></td><td class="rest"><div class="day-num">5</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td></tr>
+      <tr><td class="rest"><div class="day-num">8</div></td><td class="trained"><div class="day-num">9</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">10</div></td><td class="trained"><div class="day-num">11</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td></tr>
+      <tr><td class="trained"><div class="day-num">15</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td><td class="rest"><div class="day-num">18</div></td><td class="rest"><div class="day-num">19</div></td><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td></tr>
+      <tr><td class="rest"><div class="day-num">22</div></td><td class="trained"><div class="day-num">23</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td></tr>
+      <tr><td class="trained"><div class="day-num">29</div><div class="minutes">8 min</div></td><td class="trained"><div class="day-num">30</div><div class="minutes">12 min</div></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>October 2025</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td><td class="trained"><div class="day-num">2</div><div class="minutes">18 min</div></td><td class="trained"><div class="day-num">3</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">4</div></td><td class="trained"><div class="day-num">5</div><div class="minutes">18 min</div></td></tr>
+      <tr><td class="rest"><div class="day-num">6</div></td><td class="trained"><div class="day-num">7</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">8</div></td><td class="trained"><div class="day-num">9</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">10</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td></tr>
+      <tr><td class="rest"><div class="day-num">13</div></td><td class="trained"><div class="day-num">14</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">15</div></td><td class="trained"><div class="day-num">16</div><div class="minutes">12 min</div></td><td class="trained"><div class="day-num">17</div><div class="minutes">8 min</div></td><td class="rest"><div class="day-num">18</div></td><td class="rest"><div class="day-num">19</div></td></tr>
+      <tr><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td><td class="rest"><div class="day-num">22</div></td><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td></tr>
+      <tr><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="trained"><div class="day-num">29</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td><td class="empty"></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>November 2025</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td><td class="trained"><div class="day-num">2</div><div class="minutes">18 min</div></td></tr>
+      <tr><td class="rest"><div class="day-num">3</div></td><td class="trained"><div class="day-num">4</div><div class="minutes">18 min</div></td><td class="rest"><div class="day-num">5</div></td><td class="trained"><div class="day-num">6</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">7</div></td><td class="rest"><div class="day-num">8</div></td><td class="rest"><div class="day-num">9</div></td></tr>
+      <tr><td class="rest"><div class="day-num">10</div></td><td class="trained"><div class="day-num">11</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">12</div></td><td class="trained"><div class="day-num">13</div><div class="minutes">16 min</div></td><td class="trained"><div class="day-num">14</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">15</div></td><td class="rest"><div class="day-num">16</div></td></tr>
+      <tr><td class="rest"><div class="day-num">17</div></td><td class="trained"><div class="day-num">18</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">19</div></td><td class="trained"><div class="day-num">20</div><div class="minutes">20 min</div></td><td class="trained"><div class="day-num">21</div><div class="minutes">18 min</div></td><td class="rest"><div class="day-num">22</div></td><td class="rest"><div class="day-num">23</div></td></tr>
+      <tr><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="rest"><div class="day-num">29</div></td><td class="rest"><div class="day-num">30</div></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>December 2025</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="rest"><div class="day-num">1</div></td><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td><td class="trained"><div class="day-num">4</div><div class="minutes">16 min</div></td><td class="trained"><div class="day-num">5</div><div class="minutes">16 min</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td></tr>
+      <tr><td class="rest"><div class="day-num">8</div></td><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td></tr>
+      <tr><td class="trained"><div class="day-num">15</div><div class="minutes">16 min</div></td><td class="trained"><div class="day-num">16</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">17</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">18</div><div class="minutes">10 min</div></td><td class="trained"><div class="day-num">19</div><div class="minutes">16 min</div></td><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td></tr>
+      <tr><td class="rest"><div class="day-num">22</div></td><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td><td class="trained"><div class="day-num">25</div><div class="minutes">22 min</div></td><td class="trained"><div class="day-num">26</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td></tr>
+      <tr><td class="rest"><div class="day-num">29</div></td><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>January 2026</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td><td class="rest"><div class="day-num">4</div></td></tr>
+      <tr><td class="rest"><div class="day-num">5</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td><td class="rest"><div class="day-num">8</div></td><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td><td class="rest"><div class="day-num">11</div></td></tr>
+      <tr><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td><td class="rest"><div class="day-num">15</div></td><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td><td class="rest"><div class="day-num">18</div></td></tr>
+      <tr><td class="rest"><div class="day-num">19</div></td><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td><td class="rest"><div class="day-num">22</div></td><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td></tr>
+      <tr><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="rest"><div class="day-num">29</div></td><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>February 2026</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td></tr>
+      <tr><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td><td class="rest"><div class="day-num">4</div></td><td class="rest"><div class="day-num">5</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td><td class="rest"><div class="day-num">8</div></td></tr>
+      <tr><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td><td class="rest"><div class="day-num">15</div></td></tr>
+      <tr><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td><td class="rest"><div class="day-num">18</div></td><td class="rest"><div class="day-num">19</div></td><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td><td class="rest"><div class="day-num">22</div></td></tr>
+      <tr><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>March 2026</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td></tr>
+      <tr><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td><td class="rest"><div class="day-num">4</div></td><td class="rest"><div class="day-num">5</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td><td class="rest"><div class="day-num">8</div></td></tr>
+      <tr><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td><td class="rest"><div class="day-num">15</div></td></tr>
+      <tr><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td><td class="rest"><div class="day-num">18</div></td><td class="rest"><div class="day-num">19</div></td><td class="rest"><div class="day-num">20</div></td><td class="rest"><div class="day-num">21</div></td><td class="rest"><div class="day-num">22</div></td></tr>
+      <tr><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="rest"><div class="day-num">29</div></td></tr>
+      <tr><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>April 2026</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="trained"><div class="day-num">1</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">2</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">3</div></td><td class="rest"><div class="day-num">4</div></td><td class="rest"><div class="day-num">5</div></td></tr>
+      <tr><td class="trained"><div class="day-num">6</div><div class="minutes">8 min</div></td><td class="rest"><div class="day-num">7</div></td><td class="trained"><div class="day-num">8</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">9</div></td><td class="trained"><div class="day-num">10</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">11</div></td><td class="rest"><div class="day-num">12</div></td></tr>
+      <tr><td class="trained"><div class="day-num">13</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">14</div><div class="minutes">14 min</div></td><td class="trained"><div class="day-num">15</div><div class="minutes">18 min</div></td><td class="rest"><div class="day-num">16</div></td><td class="rest"><div class="day-num">17</div></td><td class="rest"><div class="day-num">18</div></td><td class="trained"><div class="day-num">19</div><div class="minutes">12 min</div></td></tr>
+      <tr><td class="rest"><div class="day-num">20</div></td><td class="trained"><div class="day-num">21</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">22</div></td><td class="trained"><div class="day-num">23</div><div class="minutes">12 min</div></td><td class="rest"><div class="day-num">24</div></td><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td></tr>
+      <tr><td class="trained"><div class="day-num">27</div><div class="minutes">16 min</div></td><td class="trained"><div class="day-num">28</div><div class="minutes">2 min</div></td><td class="rest"><div class="day-num">29</div></td><td class="rest"><div class="day-num">30</div></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="month">
+    <h2>May 2026</h2>
+    <table>
+      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+      <tbody>
+      <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="rest"><div class="day-num">1</div></td><td class="rest"><div class="day-num">2</div></td><td class="rest"><div class="day-num">3</div></td></tr>
+      <tr><td class="trained"><div class="day-num">4</div><div class="minutes">12 min</div></td><td class="trained"><div class="day-num">5</div><div class="minutes">16 min</div></td><td class="rest"><div class="day-num">6</div></td><td class="rest"><div class="day-num">7</div></td><td class="trained"><div class="day-num">8</div><div class="minutes">10 min</div></td><td class="rest"><div class="day-num">9</div></td><td class="rest"><div class="day-num">10</div></td></tr>
+      <tr><td class="trained"><div class="day-num">11</div><div class="minutes">20 min</div></td><td class="trained"><div class="day-num">12</div><div class="minutes">16 min</div></td><td class="rest"><div class="day-num">13</div></td><td class="rest"><div class="day-num">14</div></td><td class="trained"><div class="day-num">15</div><div class="minutes">32 min</div></td><td class="trained"><div class="day-num">16</div><div class="minutes">36 min</div></td><td class="rest"><div class="day-num">17</div></td></tr>
+      <tr><td class="rest"><div class="day-num">18</div></td><td class="rest"><div class="day-num">19</div></td><td class="trained"><div class="day-num">20</div><div class="minutes">14 min</div></td><td class="rest"><div class="day-num">21</div></td><td class="rest"><div class="day-num">22</div></td><td class="rest"><div class="day-num">23</div></td><td class="rest"><div class="day-num">24</div></td></tr>
+      <tr><td class="rest"><div class="day-num">25</div></td><td class="rest"><div class="day-num">26</div></td><td class="rest"><div class="day-num">27</div></td><td class="rest"><div class="day-num">28</div></td><td class="rest"><div class="day-num">29</div></td><td class="rest"><div class="day-num">30</div></td><td class="rest"><div class="day-num">31</div></td></tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
