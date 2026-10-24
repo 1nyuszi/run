@@ -1,5 +1,5 @@
 @echo off
-echo Compiling mysqlex.cpp...
+echo Compiling run.cpp...
 g++ run.cpp -o run.exe
 
 if %ERRORLEVEL% neq 0 (

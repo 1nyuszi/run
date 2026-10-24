@@ -34,7 +34,7 @@ g++ run.cpp -o run.exe
 .\run.exe
 ```
 
-Alternatively, run `.\run.bat` to compile. The batch file pauses after compilation and does not start the timer. Its message mentioning `mysqlex.cpp` is outdated; it actually compiles `run.cpp`.
+Alternatively, run `.\run.bat` to compile. The batch file pauses after compilation and does not start the timer. It actually compiles `run.cpp`.
 
 Start the timer from the project root: log paths are relative to the current working directory. The logger does not create the `logs` directory and silently skips writing if it cannot open a log file.
 
