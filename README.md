@@ -9,13 +9,13 @@ The timer starts with a 20-second preparation countdown, then repeats:
 1. Run for 120 countdown seconds.
 2. Recover for 60 countdown seconds.
 
-The console displays the round number and a colored countdown. During the last five seconds of each countdown, the display turns red and a beep sounds. Rounds continue until you stop the program with **Ctrl+C**; there is no pause control or preset round limit.
+The console displays the round number and a colored countdown. During the last five seconds of each countdown, the display turns red and a beep sounds. Press **Ctrl+C** to stop cleanly, save a `PROGRAM_END` event, and display completed rounds and running minutes. Only fully completed running intervals count; stopping during recovery keeps the preceding completed run. Interrupted runs produce no interval log entries or partial minutes. There is no pause control or preset round limit.
 
 The calendar highlights training days in green, shows running minutes for each day, and displays total training days and running minutes. It includes every month from the earliest logged event through the current month, with weeks starting on Monday.
 
 ## Requirements
 
-- **Timer:** Windows and a `g++` compiler on `PATH`, such as a MinGW toolchain. The source uses Windows `Sleep` and `Beep` functions and includes `unistd.h`, so it expects a toolchain that provides both headers.
+- **Timer:** Windows and a `g++` compiler on `PATH`, such as a MinGW toolchain. The source uses Windows console control, event, and `Beep` functions.
 - **Console:** A terminal that supports ANSI cursor movement and colors.
 - **Calendar:** Python 3.6 or newer and a browser. All Python dependencies are in the standard library; no packages need to be installed.
 
@@ -60,10 +60,11 @@ Events are appended to `logs/YYYY_M.log`, using the local year and an unpadded m
 ```
 
 - `PROGRAM_START` marks the start of the program, before preparation.
-- `RUN` marks the beginning of a running interval.
-- `RELAX` marks the beginning of recovery, after a running interval finishes.
+- `RUN` records the start timestamp of a completed running interval.
+- `RELAX` records its finish timestamp, at the beginning of recovery. The `RUN` / `RELAX` pair is saved together only after the run finishes, in the log file for the run's starting month.
+- `PROGRAM_END` marks a clean stop with Ctrl+C (or Ctrl+Break), including during preparation.
 
-The calendar processes each file in line order. Each adjacent `RUN` / `RELAX` pair contributes **exactly two running minutes**, assigned to the local date of the `RUN` timestamp. Preparation and recovery are excluded, and an interrupted run without a following `RELAX` is not counted. Pairs split across files are not counted. Lines with fewer than two fields or a non-integer timestamp are skipped.
+The calendar processes each file in line order. Each adjacent `RUN` / `RELAX` pair contributes **exactly two running minutes**, assigned to the local date of the `RUN` timestamp. Preparation and recovery are excluded. Interrupted runs are not saved; older logs may contain unmatched `RUN` entries, which are not counted. Pairs split across files are not counted. Lines with fewer than two fields or a non-integer timestamp are skipped.
 
 These totals represent completed intervals, not measured elapsed time. In particular, each final countdown beep blocks for 300 ms before the one-second sleep, making the actual countdown slightly longer than its nominal duration.
 
@@ -82,4 +83,6 @@ Compiled `.exe` files and Python cache files are also ignored by Git. The checke
 
 ## Changing interval lengths
 
-Preparation, running, and recovery durations are hardcoded in the `count_back` calls in `run.cpp`. Edit those values and rebuild to change the timer. If you change the running duration, also update the fixed `minutes_per_day[day] += 2` calculation in `parse_logs` in `calendar/training_calendar.py` so the calendar reflects the new interval length. Neither tool currently accepts command-line configuration.
+Preparation and recovery durations are hardcoded in the `count_back` calls in `run.cpp`; running duration uses `RUN_SECONDS`. Edit those values and rebuild to change the timer. If you change the running duration, also update the fixed `minutes_per_day[day] += 2` calculation in `parse_logs` in `calendar/training_calendar.py` so the calendar reflects the new interval length. Neither tool currently accepts command-line configuration.
+
+Run the graceful stopping tests with `python tests/test_stopping.py`. They compile the timer with simulated waits and Ctrl+C events and verify the summary, saved events, and calendar totals without changing your training logs.

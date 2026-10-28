@@ -9,7 +9,7 @@ I’d prioritize these improvements:
 
 3. Use one source for interval durations. The timer uses 120 seconds, while the calendar independently assumes two minutes. A shared configuration—or logging the intended duration—would prevent mismatched totals after changes.
 
-4. Add graceful stopping. Handle Ctrl+C, record a session-end event, and show completed rounds and running time. Decide explicitly whether interrupted intervals should contribute partial minutes.
+4. Add graceful stopping. Handle Ctrl+C, record a session-end event, and show completed rounds and running time. Decide explicitly whether interrupted intervals should contribute partial minutes. -- DONE 2026.10.28. (Interrupted intervals don't contribute)
 
 5. Improve calendar parsing. Handle missing directories and unreadable files, validate event sequences, and support intervals crossing monthly log boundaries.
 
