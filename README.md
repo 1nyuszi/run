@@ -24,9 +24,6 @@ The calendar highlights training days in green, shows running minutes for each d
 Run these commands in PowerShell from the project root:
 
 ```powershell
-# Create the directory used by both tools (also safe if it already exists).
-New-Item -ItemType Directory -Force logs | Out-Null
-
 # Compile the timer.
 g++ run.cpp -o run.exe
 
@@ -36,7 +33,7 @@ g++ run.cpp -o run.exe
 
 Alternatively, run `.\run.bat` to compile. The batch file pauses after compilation and does not start the timer. It actually compiles `run.cpp`.
 
-Start the timer from the project root: log paths are relative to the current working directory. The logger does not create the `logs` directory and silently skips writing if it cannot open a log file.
+Start the timer from the project root: log paths are relative to the current working directory. The logger creates `logs/` automatically. If creating the directory, opening the log file, writing, or closing fails, the timer prints an error and exits with a nonzero status so a session cannot continue without saving history.
 
 ## Generate the training calendar
 

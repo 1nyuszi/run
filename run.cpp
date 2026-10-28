@@ -23,13 +23,13 @@ void set_color(int color);
 void count_back(int seconds, int color, string text);
 
 int main() {
-    logger.do_log("PROGRAM_START");
+    if (!logger.do_log("PROGRAM_START")) return EXIT_FAILURE;
     count_back(20, COLOR_GREY, "It's Interval Run 2.0 program. Prepare... ");
     while(true) {
         run_round++;
-        logger.do_log("RUN");
+        if (!logger.do_log("RUN")) return EXIT_FAILURE;
         count_back(120, COLOR_YELLOW, "It's your " + to_string(run_round) + ". round. Let's run...");
-        logger.do_log("RELAX");
+        if (!logger.do_log("RELAX")) return EXIT_FAILURE;
         count_back(60, COLOR_CYAN, "It was your " + to_string(run_round) + ". round. Let's relax a bit...");
     }
     return 0;
@@ -66,5 +66,5 @@ void count_back(int seconds, int color, string text) {
         }
         cout << seconds;
         Sleep(1000);
-    }    
+    }
 }
